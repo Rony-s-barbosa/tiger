@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Tigrinho - 3x3 Slots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🐯 Jogo do Tigrinho 🐯</h1>
+    <p>Exemplo educacional - Não use dinheiro real</p>
+    
+    <div class="container">
+        <div class="game-area">
+            <div class="grid-container">
+                <div class="slot" id="slot0"><div class="reel" id="reel0"></div></div>
+                <div class="slot" id="slot1"><div class="reel" id="reel1"></div></div>
+                <div class="slot" id="slot2"><div class="reel" id="reel2"></div></div>
+                <div class="slot" id="slot3"><div class="reel" id="reel3"></div></div>
+                <div class="slot" id="slot4"><div class="reel" id="reel4"></div></div>
+                <div class="slot" id="slot5"><div class="reel" id="reel5"></div></div>
+                <div class="slot" id="slot6"><div class="reel" id="reel6"></div></div>
+                <div class="slot" id="slot7"><div class="reel" id="reel7"></div></div>
+                <div class="slot" id="slot8"><div class="reel" id="reel8"></div></div>
+                
+                <div class="win-lines">
+                    <!-- Linhas horizontais -->
+                    <div class="line horizontal-line" style="top: 50px;"></div>
+                    <div class="line horizontal-line" style="top: 160px;"></div>
+                    <div class="line horizontal-line" style="top: 270px;"></div>
+                    
+                    <!-- Linhas verticais -->
+                    <div class="line vertical-line" style="left: 50px;"></div>
+                    <div class="line vertical-line" style="left: 160px;"></div>
+                    <div class="line vertical-line" style="left: 270px;"></div>
+                    
+                    <!-- Linhas diagonais -->
+                    <div class="line diagonal-line-1"></div>
+                    <div class="line diagonal-line-2"></div>
+                </div>
+            </div>
+            
+            <div class="win-message" id="winMessage"></div>
+            
+            <div class="controls">
+                <div class="bet-controls">
+                    <button id="decreaseBet">-</button>
+                    <div class="info-box">Aposta: <span id="betAmount">10</span></div>
+                    <button id="increaseBet">+</button>
+                </div>
+                <button class="spin-btn" id="spinButton">GIRAR</button>
+            </div>
+            
+            <div class="info">
+                <div class="info-box">Saldo: <span id="balance" class="balance">1000</span></div>
+                <div class="info-box">Último Ganho: <span id="lastWin">0</span></div>
+            </div>
+            
+            <div class="symbols">
+                <div class="symbol-info">🐯 = 5x</div>
+                <div class="symbol-info">🍒 = 3x</div>
+                <div class="symbol-info">💎 = 4x</div>
+                <div class="symbol-info">🎰 = 2x</div>
+                <div class="symbol-info">🎮 = 1x</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="warning">
+        <p>⚠️ Este é apenas um exemplo educacional. Jogos de apostas podem causar dependência.</p>
+        <p>Não use dinheiro real em jogos semelhantes.</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

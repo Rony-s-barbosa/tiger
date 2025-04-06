@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+    margin-top: 20px;
+}
+
+h1 {
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+    width: 320px;
+    height: 320px;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    background-color: #2a2a5a;
+    border: 3px solid #ffa500;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+    position: relative;
+}
+
+.reel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.1s ease;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+}
+
+.reel-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.bet-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.spin-btn {
+    font-size: 20px;
+    padding: 15px 40px;
+    background: linear-gradient(to right, #ffa500, #ff4500);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.info-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.balance {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.win-message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+    min-height: 36px;
+}
+
+.win-lines {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.line {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.5);
+    display: none;
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 10px;
+    left: 0;
+}
+
+.vertical-line {
+    width: 10px;
+    height: 100%;
+    top: 0;
+}
+
+.diagonal-line-1 {
+    width: 140%;
+    height: 10px;
+    left: -20
+     }
